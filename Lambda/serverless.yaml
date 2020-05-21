@@ -1,0 +1,10 @@
+service: cloudfront
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128
+
+functions:
+  redirect-sample:
+    handler: index.handler
