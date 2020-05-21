@@ -3,11 +3,12 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '15'))
     }
     agent none
-    parameters { choice(name: 'stage', choices: ['Dev', 'Prod'], description: '') }
+    
     environment {
                 AWS_ACCESS_KEY_ID="AKIAXCOAPUPY5UDHQT23"
                 AWS_SECRET_ACCESS_KEY="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"
             }
+    parameters { choice(name: 'stage', choices: ['Dev', 'Prod'], description: '') }
     stages {
 
         stage('NPM Dependency Install') {
