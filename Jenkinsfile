@@ -18,9 +18,9 @@ pipeline {
                         export AWS_SECRET_ACCESS_KEY=Q/Lf5rCSK6ifknsLFD0N7cADv84+/SRuRAKT91Ie
                         cd Lambda
                         ls
-                        apt-get update && \
-                        apt-get -y install sudo
-                        sudo npm install -g serverless
+                        node --version
+                        npm --version
+                        npm install -g serverless@1.71.3
                         sls deploy --stage prod
                         
                     '''
