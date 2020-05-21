@@ -16,9 +16,8 @@ pipeline {
                     sh '''
                         export AWS_ACCESS_KEY_ID=AKIAXCOAPUPYZE5ZFGU5
                         export AWS_SECRET_ACCESS_KEY=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
-                        chown -R 996:994 "/.npm"
-                        npm install -g serverless
                         cd Lambda
+                        npm install -g serverless
                         sls deploy --stage prod
                         
                     '''
