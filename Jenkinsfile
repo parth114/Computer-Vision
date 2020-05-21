@@ -3,10 +3,6 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '15'))
     }
     agent none
-    environment {
-                AWS_ACCESS_KEY_ID="AKIAXCOAPUPYZMOZQPON"
-                AWS_SECRET_ACCESS_KEY="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"
-            }
     stages {
 
         stage('NPM Dependency Install') {
@@ -18,6 +14,8 @@ pipeline {
                 script {
                     FAILED_STAGE=env.STAGE_NAME
                     sh '''
+                        export AWS_ACCESS_KEY_ID="AKIAXCOAPUPYZMOZQPON"
+                        export AWS_SECRET_ACCESS_KEY="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"
                         cd Lambda
                         ls
                         node --version
