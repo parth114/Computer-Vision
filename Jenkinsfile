@@ -4,8 +4,8 @@ pipeline {
     }
     agent none
     environment {
-                AWS_ACCESS_KEY_ID="AKIAXCOAPUPY5MW4PEPS"
-                AWS_SECRET_ACCESS_KEY="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"
+                AWS_ACCESS_KEY_ID="AKIAXCOAPUPY5UDHQT23"
+                AWS_SECRET_ACCESS_KEY="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"
             }
     stages {
 
@@ -16,14 +16,12 @@ pipeline {
 
             steps {
                 script {
-                    FAILED_STAGE=env.STAGE_NAME
                     sh '''
                         cd Lambda
                         ls
                         node --version
                         npm --version
                         npm install -g serverless
-                        echo "Choice: ${params.CHOICE}"
                         sls deploy --stage prod
                         
                     '''
