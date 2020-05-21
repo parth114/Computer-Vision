@@ -4,8 +4,8 @@ pipeline {
     }
     agent none
     environment {
-                AWS_ACCESS_KEY_ID     = "AKIAXCOAPUPYZE5ZFGU5"
-                AWS_SECRET_ACCESS_KEY = "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"
+                AWS_ACCESS_KEY_ID=AKIAXCOAPUPY5MW4PEPS
+                AWS_SECRET_ACCESS_KEY=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
             }
     stages {
 
@@ -22,7 +22,7 @@ pipeline {
                         ls
                         node --version
                         npm --version
-                        npm install -g serverless@1.71.3
+                        npm install -g serverless
                         sls deploy --stage prod
                         
                     '''
