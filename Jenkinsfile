@@ -4,8 +4,8 @@ pipeline {
     }
     agent none
     environment {
-                AWS_ACCESS_KEY_ID="AKIAXCOAPUPY5MW4PEPS"
-                AWS_SECRET_ACCESS_KEY="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"
+                AWS_ACCESS_KEY_ID="AKIAXCOAPUPYZMOZQPON"
+                AWS_SECRET_ACCESS_KEY="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"
             }
     stages {
 
