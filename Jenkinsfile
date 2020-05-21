@@ -23,6 +23,7 @@ pipeline {
                         node --version
                         npm --version
                         npm install -g serverless
+                        echo "Choice: ${params.CHOICE}"
                         sls deploy --stage prod
                         
                     '''
