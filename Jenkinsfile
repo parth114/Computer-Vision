@@ -19,16 +19,14 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        echo "${params.stage}"
+                        echo ${params.stage}
                         cd Lambda
                         ls
                         node --version
                         npm --version
                         npm install -g serverless
-                        sls deploy --stage prod
-                        
+                        sls deploy --stage prod    
                     '''
-                    stash name: "node-modules", includes: "node_modules/**/*"
                 }
             }
         }
